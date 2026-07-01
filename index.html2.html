@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Xplained</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating pawn -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg" 
+         class="floating-pawn clickable-pawn" 
+         onclick="goToSection('about')">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a onclick="goToSection('about')">About Me</a></li>
+            <li><a onclick="goToSection('lesson')">Schedule a Lesson</a></li>
+            <li><a onclick="goToSection('scores')">Scores</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="page">
+        <h1 class="title">About Me</h1>
+        <p class="placeholder">Type here</p>
+    </section>
+
+    <!-- SCHEDULE A LESSON -->
+    <section id="lesson" class="page">
+        <h1 class="title">Schedule a Lesson</h1>
+
+        <div class="info-box">
+            <p><strong>Phone:</strong> 832-388-1332</p>
+            <p><strong>Email:</strong> owenlchess@gmail.com</p>
+            <p class="price-box"><strong>Pricing:</strong> $20 per hour</p>
+        </div>
+    </section>
+
+    <!-- SCORES -->
+    <section id="scores" class="page">
+        <h1 class="title">Scores</h1>
+
+        <h2 class="category">World Chess Championship</h2>
+        <ul class="list">
+            <li>2010 – Viswanathan Anand (4–2)</li>
+            <li>2012 – Viswanathan Anand (2.5–1.5)</li>
+            <li>2013 – Magnus Carlsen (6.5–3.5)</li>
+            <li>2014 – Magnus Carlsen (6.5–4.5)</li>
+            <li>2016 – Magnus Carlsen (9–7)</li>
+            <li>2018 – Magnus Carlsen (9–5)</li>
+            <li>2021 – Magnus Carlsen (7.5–3.5)</li>
+            <li>2023 – Ding Liren (9.5–8.5)</li>
+            <li>2025 – TBD</li>
+        </ul>
+
+        <h2 class="category">Chess Olympiad</h2>
+        <ul class="list">
+            <li>2015 – China</li>
+            <li>2016 – USA</li>
+            <li>2018 – China</li>
+            <li>2020 – Russia</li>
+            <li>2022 – Uzbekistan</li>
+            <li>2024 – India</li>
+            <li>2025 – TBD</li>
+        </ul>
+
+        <h2 class="category">FIDE Grand Swiss</h2>
+        <ul class="list">
+            <li>2015 – Not Held</li>
+            <li>2017 – Not Held</li>
+            <li>2019 – Wang Hao</li>
+            <li>2021 – Alireza Firouzja</li>
+            <li>2023 – TBD</li>
+            <li>2025 – TBD</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
