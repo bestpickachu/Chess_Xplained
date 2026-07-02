@@ -115,7 +115,7 @@ body {
     margin-top: 10px;
 }
 
-/* ⭐ Quote Box */
+/* Quote Box */
 .quote-box {
     background: #f9f9f9;
     padding: 20px;
@@ -145,7 +145,7 @@ body {
     font-size: 1.3rem;
 }
 
-/* ⭐ TIPS & TRICKS */
+/* Tips & Tricks */
 .tips-list {
     font-size: 1.5rem;
     width: 60%;
@@ -154,33 +154,6 @@ body {
     line-height: 2.2rem;
 }
 
-/* ⭐ PUZZLE OF THE DAY */
+/* Puzzle of the Day */
 .puzzle-box {
-    background: #f9f9f9;
-    padding: 20px;
-    width: 500px;
-    margin: 30px auto;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid black;
-}
-
-.puzzle-box img {
-    width: 300px;
-    margin-top: 15px;
-    border: 2px solid black;
-}
-
-.solution-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.solution-text {
-    margin-top: 15px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: none;
-}
+    background
