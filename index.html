@@ -7,24 +7,40 @@
 </head>
 <body>
 
-    <!-- Floating pawn -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg" 
-         class="floating-pawn clickable-pawn" 
-         onclick="goToSection('about')">
+    <!-- Background pawn container -->
+    <div id="pawn-container"></div>
+
+    <!-- Floating pawns -->
+    <div class="pawn-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg" class="floating-pawn" onclick="goToSection('about')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg" class="floating-pawn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg" class="floating-pawn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg" class="floating-pawn">
+    </div>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
         <ul>
+            <li><a onclick="goToSection('home')">Home</a></li>
             <li><a onclick="goToSection('about')">About Me</a></li>
             <li><a onclick="goToSection('lesson')">Schedule a Lesson</a></li>
             <li><a onclick="goToSection('scores')">Scores</a></li>
+            <li><a onclick="goToSection('tips')">Tips & Tricks</a></li>
+            <li><a onclick="goToSection('puzzle')">Puzzle of the Day</a></li>
         </ul>
     </nav>
 
-    <!-- ABOUT ME -->
+    <!-- HOME -->
+    <section id="home" class="page home-screen">
+        <h1 class="main-title">Welcome to Chess Xplained</h1>
+    </section>
+
+    <!-- ABOUT -->
     <section id="about" class="page">
         <h1 class="title">About Me</h1>
-        <p class="placeholder">Type here</p>
+        <p class="placeholder">
+            Hello, and welcome to my website! I’m really glad you’re here. I built this entire site during a summer camp in 2026, and it’s been an awesome project to work on. My name is Owen Li, and chess has been one of my biggest passions for as long as I can remember. Whether you’re here to learn, explore, or just look around, I hope you enjoy your time on Chess Xplained. Have fun!
+        </p>
     </section>
 
     <!-- SCHEDULE A LESSON -->
@@ -35,6 +51,12 @@
             <p><strong>Phone:</strong> 832-388-1332</p>
             <p><strong>Email:</strong> owenlchess@gmail.com</p>
             <p class="price-box"><strong>Pricing:</strong> $20 per hour</p>
+        </div>
+
+        <div class="quote-box">
+            <h2>Quote of the Day</h2>
+            <p id="daily-quote"></p>
+            <p id="extra-quote" class="extra-quote"></p>
         </div>
     </section>
 
@@ -75,6 +97,62 @@
             <li>2023 – TBD</li>
             <li>2025 – TBD</li>
         </ul>
+
+        <h2 class="category">Candidates Tournament</h2>
+        <ul class="list">
+            <li>2014 – Viswanathan Anand</li>
+            <li>2016 – Sergey Karjakin</li>
+            <li>2018 – Fabiano Caruana</li>
+            <li>2020 – Ian Nepomniachtchi</li>
+            <li>2022 – Ian Nepomniachtchi</li>
+            <li>2024 – Hikaru Nakamura</li>
+            <li>2026 – TBD</li>
+        </ul>
+
+        <h2 class="category">Tata Steel Masters</h2>
+        <ul class="list">
+            <li>2015 – Magnus Carlsen</li>
+            <li>2016 – Magnus Carlsen</li>
+            <li>2017 – Wesley So</li>
+            <li>2018 – Magnus Carlsen</li>
+            <li>2019 – Magnus Carlsen</li>
+            <li>2020 – Fabiano Caruana</li>
+            <li>2021 – Jorden van Foreest</li>
+            <li>2022 – Magnus Carlsen</li>
+            <li>2023 – Anish Giri</li>
+            <li>2024 – Wei Yi</li>
+            <li>2025 – TBD</li>
+        </ul>
+    </section>
+
+    <!-- TIPS & TRICKS -->
+    <section id="tips" class="page">
+        <h1 class="title">Tips & Tricks</h1>
+
+        <ul class="tips-list">
+            <li>Control the center early — it gives your pieces more power.</li>
+            <li>Develop all your minor pieces before moving the same piece twice.</li>
+            <li>Castle early to protect your king and connect your rooks.</li>
+            <li>Don’t rush pawn moves — every pawn move creates weaknesses.</li>
+            <li>Look for forcing moves: checks, captures, and threats.</li>
+            <li>Before every move, ask: “What changed after my opponent’s move?”</li>
+            <li>When you see a good move… look for a better one.</li>
+            <li>Trade pieces when ahead — keep pieces when behind.</li>
+            <li>Always think about your opponent’s plan, not just your own.</li>
+        </ul>
+    </section>
+
+    <!-- PUZZLE OF THE DAY -->
+    <section id="puzzle" class="page">
+        <h1 class="title">Puzzle of the Day</h1>
+
+        <div class="puzzle-box">
+            <h2>White to Move</h2>
+            <img id="puzzle-image" src="" alt="Puzzle of the Day">
+            <p id="puzzle-description"></p>
+            <button class="solution-btn" onclick="showSolution()">Show Solution</button>
+            <p id="puzzle-solution" class="solution-text"></p>
+        </div>
     </section>
 
     <script src="script.js"></script>
