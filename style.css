@@ -5,7 +5,21 @@ body {
     overflow-x: hidden;
 }
 
-/* Floating pawn */
+/* Floating pawn background */
+#pawn-container img {
+    position: absolute;
+    width: 50px;
+    opacity: 0.5;
+    animation: float-bg 12s linear infinite;
+    z-index: -1;
+}
+
+@keyframes float-bg {
+    0% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-150vh) rotate(360deg); }
+}
+
+/* Floating pawn foreground */
 .floating-pawn {
     position: fixed;
     width: 60px;
@@ -47,6 +61,23 @@ body {
     font-size: 1.3rem;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/* HOME SCREEN */
+.home-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: "Brush Script MT", cursive;
+    text-shadow: 0 0 20px black;
 }
 
 /* Page Sections */
@@ -84,6 +115,24 @@ body {
     margin-top: 10px;
 }
 
+/* ⭐ Quote Box */
+.quote-box {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.extra-quote {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #444;
+}
+
 /* Scores */
 .category {
     font-size: 2rem;
@@ -94,4 +143,44 @@ body {
 
 .list {
     font-size: 1.3rem;
+}
+
+/* ⭐ TIPS & TRICKS */
+.tips-list {
+    font-size: 1.5rem;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    line-height: 2.2rem;
+}
+
+/* ⭐ PUZZLE OF THE DAY */
+.puzzle-box {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.puzzle-box img {
+    width: 300px;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+
+.solution-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.solution-text {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: none;
 }
