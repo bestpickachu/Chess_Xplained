@@ -1,13 +1,6 @@
 function goToSection(section) {
     document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
     document.getElementById(section).style.display = 'block';
-}
-
-// Show About Me first
-goToSection('about');
-function goToSection(section) {
-    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
-    document.getElementById(section).style.display = 'block';
 
     if (section === "lesson") {
         loadQuoteOfTheDay();
@@ -18,6 +11,7 @@ function goToSection(section) {
     }
 }
 
+// Show home on load
 goToSection('home');
 
 // Floating pawn background
@@ -34,7 +28,7 @@ function spawnPawn() {
 
 setInterval(spawnPawn, 500);
 
-// ⭐ Quote of the Day
+// Quote of the Day
 const quotes = [
     "Chess is the gymnasium of the mind. – Blaise Pascal",
     "In life, as in chess, forethought wins. – Charles Buxton",
@@ -60,7 +54,7 @@ function loadQuoteOfTheDay() {
     document.getElementById("extra-quote").textContent = extra;
 }
 
-// ⭐ PUZZLE OF THE DAY (simple images, not clickable)
+// Puzzle of the Day
 const puzzles = [
     {
         img: "https://images.chesscomfiles.com/uploads/v1/images/learn-chess/puzzles/basic-mate-in-1.png",
@@ -112,4 +106,13 @@ const puzzles = [
 function loadPuzzleOfTheDay() {
     const puzzle = puzzles[Math.floor(Math.random() * puzzles.length)];
 
-    document.getElementById("puzzle-image").src = puzzle
+    document.getElementById("puzzle-image").src = puzzle.img;
+    document.getElementById("puzzle-description").textContent = puzzle.desc;
+    document.getElementById("puzzle-solution").textContent = puzzle.solution;
+
+    document.getElementById("puzzle-solution").style.display = "none";
+}
+
+function showSolution() {
+    document.getElementById("puzzle-solution").style.display = "block";
+}
